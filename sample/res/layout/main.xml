@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:gravity="center">
+
+    
+    <android.widget.VerticalSeekBar_Reverse
+        android:id="@+id/seekbar_reverse"
+        android:layout_width="wrap_content"
+        android:layout_height="150dip"
+        android:layout_marginRight="30dip"
+        />
+    
+    	<TextView  android:id="@+id/reverse_sb_progresstext"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_below="@+id/seekbar_reverse"
+    	    android:gravity="center"/>
+    
+    <android.widget.VerticalSeekBar android:id="@+id/vertical_Seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="150dip"
+        android:layout_toRightOf="@+id/seekbar_reverse"/>
+    
+    	<TextView  android:id="@+id/vertical_sb_progresstext"
+    	    android:layout_width="wrap_content"
+    	android:layout_toRightOf="@+id/seekbar_reverse"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center"
+    	    android:layout_below="@+id/vertical_Seekbar"/>
+
+</RelativeLayout>
