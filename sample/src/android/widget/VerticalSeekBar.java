@@ -37,6 +37,11 @@ public class VerticalSeekBar extends SeekBar {
         super.onDraw(c);
     }
 
+    public synchronized void setProgressAndThumb(int progress) {
+        setProgress(getMax() - (getMax()- progress));
+        onSizeChanged(getWidth(), getHeight() , 0, 0);
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!isEnabled()) {
