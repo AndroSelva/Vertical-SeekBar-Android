@@ -51,7 +51,6 @@ public class VerticalSeekBar extends SeekBar {
             	i=getMax() - (int) (getMax() * event.getY() / getHeight());
                 setProgress(i);
                 Log.i("Progress",getProgress()+"");
-                onSizeChanged(getWidth(), getHeight(), 0, 0);
                 break;
 
             case MotionEvent.ACTION_CANCEL:
@@ -59,5 +58,10 @@ public class VerticalSeekBar extends SeekBar {
         }
         return true;
     }
-    
+
+    @Override
+    public synchronized void setProgress(int progress) {
+        super.setProgress(progress);
+        onSizeChanged(getWidth(), getHeight(), 0, 0);
+    }
 }
