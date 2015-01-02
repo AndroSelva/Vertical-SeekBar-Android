@@ -59,5 +59,11 @@ public class VerticalSeekBar_Reverse extends SeekBar {
         }
         return true;
     }
+
+    @Override
+    public synchronized void setProgress(int progress) {
+        super.setProgress(progress);
+        onSizeChanged(getWidth(), getHeight(), 0, 0);
+    }
     
 }
